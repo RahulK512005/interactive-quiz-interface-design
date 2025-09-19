@@ -1,22 +1,14 @@
 {
+  "name": "quiz-app-public",
   "buildCommand": "npm run build",
   "outputDirectory": "build",
   "framework": "vite",
   "installCommand": "npm install",
   "public": true,
-  "headers": [
+  "rewrites": [
     {
       "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
-        },
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        }
-      ]
+      "destination": "/index.html"
     }
   ]
 }
